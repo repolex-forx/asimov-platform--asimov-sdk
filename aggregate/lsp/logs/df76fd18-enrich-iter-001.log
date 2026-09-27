@@ -1,0 +1,31 @@
+[2026-09-27T19:27:31Z] === ENRICH ITERATION 1 START | repo=asimov-platform/asimov-sdk sha=df76fd18 ===
+[2026-09-27T19:27:31Z] [iter=1] PHASE START: enrich repo=asimov-platform/asimov-sdk sha=df76fd18 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/df76fd18-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/df76fd18d73735b0a74924ceea9184e2e991bd5a.nq.gz
+[2026-09-27T19:27:31Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-27T19:27:37Z] [iter=1] AST store loaded triples=596164 load_secs=5 mem_mb=869 MB
+[2026-09-27T19:27:37Z] [iter=1] Step 2: Finding LSP targets mem_mb=869 MB
+[2026-09-27T19:27:38Z] [iter=1] LSP targets found call_sites=5507 imports=327 extends=0 implements=29 secs=1
+[2026-09-27T19:27:39Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=869 MB
+[2026-09-27T19:27:42Z] [iter=1] Position index built positions=39937 nodes_with_types=49102 secs=3 mem_mb=869 MB
+[2026-09-27T19:27:42Z] [iter=1] Step 3: Starting LSP resolution mem_mb=869 MB already_completed_types=[] already_completed_files=0
+[2026-09-27T19:27:42Z] [iter=1] Resolving target type target_type=call_site count=5507
+[2026-09-27T19:29:19Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.8 files_done=0 resolved=0 errors=0 current=rust/lib/asimov-registry/tests/registry.rs
+[2026-09-27T19:31:16Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.7 files_done=1 resolved=117 errors=17 current=rust/lib/asimov-runner/src/executor.rs
+[2026-09-27T19:31:48Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.3 files_done=3 resolved=345 errors=91 current=rust/lib/asimov-module-kit/src/module.rs
+[2026-09-27T19:32:23Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.9 files_done=5 resolved=887 errors=178 current=rust/lib/asimov-registry/src/registry.rs
+[2026-09-27T19:32:59Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.5 files_done=9 resolved=1304 errors=322 current=rust/lib/asimov-directory/src/fs/module_iterators.rs
+[2026-09-27T19:33:31Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.0 files_done=21 resolved=1767 errors=399 current=rust/lib/asimov-server/src/http/mcp.rs
+[2026-09-27T19:34:01Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.5 files_done=31 resolved=2174 errors=485 current=rust/lib/asimov-runner/src/programs/matcher.rs
+[2026-09-27T19:34:32Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.0 files_done=50 resolved=2516 errors=576 current=rust/lib/asimov-server/tests/mcp.rs
+[2026-09-27T19:35:03Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.5 files_done=73 resolved=2885 errors=677 current=rust/lib/asimov-directory/src/fs/config_directory.rs
+[2026-09-27T19:35:50Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=8.3 files_done=118 resolved=3382 errors=751 current=rust/lib/asimov-server/src/http/openai_v1/embeddings.rs
+[2026-09-27T19:36:02Z] [iter=1] Target type resolved target_type=call_site resolved=3476 errors=6276 secs=499 mem_mb=869 MB
+[2026-09-27T19:36:02Z] [iter=1] Resolving target type target_type=import_statement count=327
+[2026-09-27T19:36:38Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=9.1 files_done=1 resolved=1 errors=0 current=rust/lib/asimov-patterns/src/programs/matcher.rs
+[2026-09-27T19:37:06Z] [iter=1] Target type resolved target_type=import_statement resolved=320 errors=0 secs=65 mem_mb=869 MB
+[2026-09-27T19:37:06Z] [iter=1] Resolving target type target_type=implements_clause count=29
+[2026-09-27T19:37:17Z] [iter=1] HEARTBEAT target_type=implements_clause elapsed_min=9.8 files_done=0 resolved=0 errors=0 current=rust/lib/asimov-protocol/src/topic.rs
+[2026-09-27T19:37:50Z] [iter=1] HEARTBEAT target_type=implements_clause elapsed_min=10.3 files_done=2 resolved=2 errors=0 current=rust/lib/asimov-patterns/src/programs/lister.rs
+[2026-09-27T19:37:54Z] [iter=1] Target type resolved target_type=implements_clause resolved=17 errors=0 secs=48 mem_mb=869 MB
+[2026-09-27T19:39:02Z] [iter=1] Step 5: Writing final enrichment file triples=50115
+[2026-09-27T19:39:03Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/df76fd18d73735b0a74924ceea9184e2e991bd5a.nq.gz size_kb=1148
+[2026-09-27T19:39:03Z] [iter=1] PHASE END: enrich elapsed_s=691 elapsed_min=11.5 total_triples=50115
